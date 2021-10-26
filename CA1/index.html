@@ -9,32 +9,156 @@
     <body>
         <p id="id-TOP">
             <img alt="CCT College Dublin" src="pictures/CCTlogo.png" style="margin-right: 0.5cm;margin-bottom: 0.3cm; float:left; width:35%" title="CCT College Dublin">
-            <h1> Assignment CA1 - ERD, HTML Tables & CSS</h1>
-            <h2>   Module Database & Web Development</h2>
-            <h2>by Marcelo Claudio - Student.2021269 - Course Higher Diploma in Science in Computing - 2021.10</h2>
-            <h3></h3>
         </p>
+        <h1> Assignment CA1 - ERD, HTML Tables & CSS</h1>
+        <h2>   Module Database & Web Development</h2>
+        <h2>by Marcelo Claudio - Student.2021269 - Course Higher Diploma in Science in Computing - 2021.10</h2>
+
+
         <hr />
         <br />
-        <p>
-            <b>Assessment Task: </b> HR department needs to record information about its employees, job titles, and the departments that they work at. 
-            <ul type="disc">
-                <li><b>Employees</b> should have a unique identifier, date of birth, name, gender, salary, and hire date.
-                    <i>An employee</i> can belong to a different department at different dates, and possibly concurrently.
-                <li><b>Job Title</b>should be stored for each employee. Storing actual and previous Job Titles with dates for which the employee held that title.
-                <li><b>Departments</b> have a name and a unique identifier. A department can have several managers over different periods, and at the same time.
-                <li><b>Department manager</b> should have the unique department number, the employee number, and the dates they managed the departmentThis is step two.
+        <b>Assessment Task: </b> HR department needs to record information about its employees, job titles, and the departments that they work at. 
+        <ul class="ultype">
+             <li><b>Employees</b> should have a unique identifier, date of birth, name, gender, salary, and hire date.
+                <i>An employee</i> can belong to a different department at different dates, and possibly concurrently.
+            <li><b>Job Title</b>should be stored for each employee. Storing actual and previous Job Titles with dates for which the employee held that title.
+            <li><b>Departments</b> have a name and a unique identifier. A department can have several managers over different periods, and at the same time.
+            <li><b>Department manager</b> should have the unique department number, the employee number, and the dates they managed the departmentThis is step two.
+        </ul>
+        <br />This project also gives the following information:
+        <ul class="ultype">
+            <li> An <b>employee</b> (including the dept manager) can belong to a different department at different dates, and possibly concurrently.
+            <li><b>Salary</b> changes, such as <b>promotions</b> and <b>raises</b>, are recorded by storing salary dates.
             </ul>
-            <br />This project also gives the following information:
-            <ul type="disc">
-                <li> An <b>employee</b> (including the dept manager) can belong to a different department at different dates, and possibly concurrently.
-                <li><b>Salary</b> changes, such as <b>promotions</b> and <b>raises</b>, are recorded by storing salary dates.
-            </ul>
-        </p>
 
         <br />
-        <b>This Diagram</b><br />
+        <b> Logical Diagram of Database</b><br />
         <img class="img" alt="Logical Diagram - Relational Data Model" src="pictures/LogicalDiagram.jpg" title="Logical Diagram">
+        <br /><br />
+
+        <table id="TEmployee">
+            <caption >Employee</caption>
+            <tr>
+                <td align=right>1</td>
+                <td align=left>Carlos Eduardo Carmo</td>
+                <td align=left>M</td>
+                <td align=right>12/04/2000</td>
+                <td align=right>12/04/2020</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>2</td>
+                <td align=left>Tiago Carneiro</td>
+                <td align=left>M</td>
+                <td align=right>07/05/1998</td>
+                <td align=right>04/07/2018</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>3</td>
+                <td align=left>Marcelo Claudio</td>
+                <td align=left>M</td>
+                <td align=right>07/11/1987</td>
+                <td align=right>20/09/2019</td>
+                <td></td>
+            </tr>
+                <tr>
+                <td align=right>4</td>
+                <td align=left>Kelson Da Boa</td>
+                <td align=left>M</td>
+                <td align=right>03/07/1995</td>
+                <td align=right>03/02/2021</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>5</td>
+                <td align=left>Eduardo Da Costa</td>
+                <td align=left>M</td>
+                <td align=right>19/12/1985</td>
+                <td align=right>22/05/2018</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>6</td>
+                <td align=left>Priscila Flores</td>
+                <td align=left>F</td>
+                <td align=right>23/11/1992</td>
+                <td align=right>21/09/2019</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>7</td>
+                <td align=left>Jessa Chris</td>
+                <td align=left>F</td>
+                <td align=right>28/03/1992</td>
+                <td align=right>20/06/2020</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>8</td>
+                <td align=left>Darlington Osarodion</td>
+                <td align=left>M</td>
+                <td align=right>09/06/1991</td>
+                <td align=right>20/07/2018</td>
+                <td align=right>30/01/2021</td>
+            </tr>
+            <tr>
+                <td align=right>9</td>
+                <td align=left>Brendan Kenna</td>
+                <td align=left>M</td>
+                <td align=right>11/12/1999</td>
+                <td align=right>14/08/2019</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>10</td>
+                <td align=left>Aldana Louzan</td>
+                <td align=left>F</td>
+                <td align=right>14/08/2001</td>
+                <td align=right>03/06/2018</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>11</td>
+                <td align=left>Saksham Mishra</td>
+                <td align=left>M</td>
+                <td align=right>27/03/1996</td>
+                <td align=right>07/09/2020</td>
+            <td></td>
+                </tr>
+                <tr>
+                <td align=right>12</td>
+                <td align=left>Madina Sagatova</td>
+                <td align=left>F</td>
+                <td align=right>05/01/2002</td>
+                <td align=right>04/12/2019</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>13</td>
+                <td align=left>Rodrigo Soares Diniz</td>
+                <td align=left>M</td>
+                <td align=right>20/02/1995</td>
+                <td align=right>03/12/2019</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>14</td>
+                <td align=left>Aldana Louzan</td>
+                <td align=left>F</td>
+                <td align=right>14/02/1982</td>
+                <td align=right>22/05/2018</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align=right>15</td>
+                <td align=left>Mikhail Timofeev</td>
+                <td align=left>M</td>
+                <td align=right>20/04/1980</td>
+                <td align=right>22/05/2018</td>
+                <td></td>
+            </tr>
+        </table>
 
 
         <br /><a href="#id-TOP">Go to top </a>
