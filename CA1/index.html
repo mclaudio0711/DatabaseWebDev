@@ -36,130 +36,311 @@
         <img class="img" alt="Logical Diagram - Relational Data Model" src="pictures/LogicalDiagram.jpg" title="Logical Diagram">
         <br /><br />
 
-        <table id="TEmployee">
-            <caption >Employee</caption>
-            <tr>
-                <td align=right>1</td>
-                <td align=left>Carlos Eduardo Carmo</td>
-                <td align=left>M</td>
-                <td align=right>12/04/2000</td>
-                <td align=right>12/04/2020</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>2</td>
-                <td align=left>Tiago Carneiro</td>
-                <td align=left>M</td>
-                <td align=right>07/05/1998</td>
-                <td align=right>04/07/2018</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>3</td>
-                <td align=left>Marcelo Claudio</td>
-                <td align=left>M</td>
-                <td align=right>07/11/1987</td>
-                <td align=right>20/09/2019</td>
-                <td></td>
-            </tr>
+        <table id="TEmployee" BORDER=2>
+            <caption ><b>Employee</b></caption>
+            <thead>
                 <tr>
-                <td align=right>4</td>
-                <td align=left>Kelson Da Boa</td>
-                <td align=left>M</td>
-                <td align=right>03/07/1995</td>
-                <td align=right>03/02/2021</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>5</td>
-                <td align=left>Eduardo Da Costa</td>
-                <td align=left>M</td>
-                <td align=right>19/12/1985</td>
-                <td align=right>22/05/2018</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>6</td>
-                <td align=left>Priscila Flores</td>
-                <td align=left>F</td>
-                <td align=right>23/11/1992</td>
-                <td align=right>21/09/2019</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>7</td>
-                <td align=left>Jessa Chris</td>
-                <td align=left>F</td>
-                <td align=right>28/03/1992</td>
-                <td align=right>20/06/2020</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>8</td>
-                <td align=left>Darlington Osarodion</td>
-                <td align=left>M</td>
-                <td align=right>09/06/1991</td>
-                <td align=right>20/07/2018</td>
-                <td align=right>30/01/2021</td>
-            </tr>
-            <tr>
-                <td align=right>9</td>
-                <td align=left>Brendan Kenna</td>
-                <td align=left>M</td>
-                <td align=right>11/12/1999</td>
-                <td align=right>14/08/2019</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>10</td>
-                <td align=left>Aldana Louzan</td>
-                <td align=left>F</td>
-                <td align=right>14/08/2001</td>
-                <td align=right>03/06/2018</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>11</td>
-                <td align=left>Saksham Mishra</td>
-                <td align=left>M</td>
-                <td align=right>27/03/1996</td>
-                <td align=right>07/09/2020</td>
-            <td></td>
+                    <th>idEmployee</th>
+                    <th>fullName</th>
+                    <th>gender</th>
+                    <th>bDay</th>
+                    <th>hireDate</th>
+                    <th>resignDate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align=right>1</td>
+                    <td align=left>Carlos Eduardo Carmo</td>
+                    <td align=center>M</td>
+                    <td align=right>12/04/2000</td>
+                    <td align=right>12/04/2020</td>
+                    <td></td>
                 </tr>
                 <tr>
-                <td align=right>12</td>
-                <td align=left>Madina Sagatova</td>
-                <td align=left>F</td>
-                <td align=right>05/01/2002</td>
-                <td align=right>04/12/2019</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>13</td>
-                <td align=left>Rodrigo Soares Diniz</td>
-                <td align=left>M</td>
-                <td align=right>20/02/1995</td>
-                <td align=right>03/12/2019</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>14</td>
-                <td align=left>Aldana Louzan</td>
-                <td align=left>F</td>
-                <td align=right>14/02/1982</td>
-                <td align=right>22/05/2018</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td align=right>15</td>
-                <td align=left>Mikhail Timofeev</td>
-                <td align=left>M</td>
-                <td align=right>20/04/1980</td>
-                <td align=right>22/05/2018</td>
-                <td></td>
-            </tr>
+                    <td align=right>2</td>
+                    <td align=left>Tiago Carneiro</td>
+                    <td align=center>M</td>
+                    <td align=right>07/05/1998</td>
+                    <td align=right>04/07/2018</td>
+                    <td></td>
+                 </tr>
+                <tr>
+                    <td align=right>3</td>
+                    <td align=left>Marcelo Claudio</td>
+                    <td align=center>M</td>
+                    <td align=right>07/11/1987</td>
+                    <td align=right>20/09/2019</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>4</td>
+                    <td align=left>Kelson Da Boa</td>
+                    <td align=center>M</td>
+                    <td align=right>03/07/1995</td>
+                    <td align=right>03/02/2021</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>5</td>
+                    <td align=left>Eduardo Da Costa</td>
+                    <td align=center>M</td>
+                    <td align=right>19/12/1985</td>
+                    <td align=right>22/05/2018</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>6</td>
+                    <td align=left>Priscila Flores</td>
+                    <td align=center>F</td>
+                    <td align=right>23/11/1992</td>
+                    <td align=right>21/09/2019</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>7</td>
+                    <td align=left>Jessa Chris</td>
+                    <td align=center>F</td>
+                    <td align=right>28/03/1992</td>
+                    <td align=right>20/06/2020</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td align=right>8</td>
+                    <td align=left>Darlington Osarodion</td>
+                    <td align=center>M</td>
+                    <td align=right>09/06/1991</td>
+                    <td align=right>20/07/2018</td>
+                    <td align=right>30/01/2021</td>
+                </tr>
+                <tr>
+                    <td align=right>9</td>
+                    <td align=left>Brendan Kenna</td>
+                    <td align=center>M</td>
+                    <td align=right>11/12/1999</td>
+                    <td align=right>14/08/2019</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>10</td>
+                    <td align=left>Aldana Louzan</td>
+                    <td align=center>F</td>
+                    <td align=right>14/08/2001</td>
+                    <td align=right>03/06/2018</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>11</td>
+                    <td align=left>Saksham Mishra</td>
+                    <td align=center>M</td>
+                    <td align=right>27/03/1996</td>
+                    <td align=right>07/09/2020</td>
+                    <td></td>
+                </tr>
+                    <tr>
+                    <td align=right>12</td>
+                    <td align=left>Madina Sagatova</td>
+                    <td align=center>F</td>
+                    <td align=right>05/01/2002</td>
+                    <td align=right>04/12/2019</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>13</td>
+                    <td align=left>Rodrigo Soares Diniz</td>
+                    <td align=center>M</td>
+                    <td align=right>20/02/1995</td>
+                    <td align=right>03/12/2019</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>14</td>
+                    <td align=left>Aldana Louzan</td>
+                    <td align=center>F</td>
+                    <td align=right>14/02/1982</td>
+                    <td align=right>22/05/2018</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align=right>15</td>
+                    <td align=left>Mikhail Timofeev</td>
+                    <td >M</td>
+                    <td align=right>20/04/1980</td>
+                    <td align=right>22/05/2018</td>
+                    <td></td>
+                    </tr>
+            </tbody>
         </table>
 
+        <br /><br /><br /><br />
+        <table id="TSalaryBases" BORDER=2>
+            <caption ><b>SalaryBases</b></caption>
+            <thead>
+                <tr>
+                    <th>idSalary</th>
+                    <th>idJobtitle</th>
+                    <th>dataUpdate</th>
+                    <th>baseSalary</th>
+                    <th>LowestRate</th>
+                    <th>HighestRate</th>
+                    <th>description</th>
+                    <th>current</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td align=center>1</td>
+                        <td align=center>14</td>
+                        <td>22/05/2018</td>
+                        <td align=right>4,200.00</td>
+                        <td align=right>4,200.00</td>
+                        <td align=right>4,200.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>2</td>
+                        <td align=center>13</td>
+                        <td>22/05/2018</td>
+                        <td align=right>4,100.00</td>
+                        <td align=right>4,100.00</td>
+                        <td align=right>4,100.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>3</td>
+                        <td align=center>1</td>
+                        <td>22/05/2018</td>
+                        <td align=right>2,030.00</td>
+                        <td align=right>2,000.00</td>
+                        <td align=right>2,900.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>4</td>
+                        <td align=center>4</td>
+                        <td>03/06/2018</td>
+                        <td align=right>1,350.00</td>
+                        <td align=right>1,350.00</td>
+                        <td align=right>1,850.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>5</td>
+                        <td align=center>3</td>
+                        <td>04/07/2018</td>
+                        <td align=right>2,020.00</td>
+                        <td align=right>1,980.00</td>
+                        <td align=right>2,870.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>6</td>
+                        <td align=center>5</td>
+                        <td>20/07/2018</td>
+                        <td align=right>1,100.00</td>
+                        <td align=right>870.00</td>
+                        <td align=right>1,100.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>7</td>
+                        <td align=center>8</td>
+                        <td>14/08/2019</td>
+                        <td align=right>1,300.00</td>
+                        <td align=right>1,300.00</td>
+                        <td align=right>1,350.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>8</td>
+                        <td align=center>6</td>
+                        <td>20/09/2019</td>
+                        <td align=right>2,680.00</td>
+                        <td align=right>2,320.00</td>
+                        <td align=right>2,680.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>9</td>
+                        <td align=center>9</td>
+                        <td>21/09/2019</td>
+                        <td align=right>870.00</td>
+                        <td align=right>870.00</td>
+                        <td align=right>870.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>10</td>
+                        <td align=center>10</td>
+                        <td>03/12/2019</td>
+                        <td align=right>2,500.00</td>
+                        <td align=right>2,500.00</td>
+                        <td align=right>2,500.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>11</td>
+                        <td align=center>11</td>
+                        <td>04/12/2019</td>
+                        <td align=right>1,980.00</td>
+                        <td align=right>1,880.00</td>
+                        <td align=right>1,980.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>12</td>
+                        <td align=center>12</td>
+                        <td>12/04/2020</td>
+                        <td align=right>3,900.00</td>
+                        <td align=right>3,900.00</td>
+                        <td align=right>3,900.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>13</td>
+                        <td align=center>7</td>
+                        <td>20/06/2020</td>
+                        <td align=right>1,890.00</td>
+                        <td align=right>1,600.00</td>
+                        <td align=right>1,890.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>14</td>
+                        <td align=center>2</td>
+                        <td>07/09/2020</td>
+                        <td align=right>1,770.00</td>
+                        <td align=right>1,770.00</td>
+                        <td align=right>1,770.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td align=center>15</td>
+                        <td align=center>15</td>
+                        <td>03/02/2021</td>
+                        <td align=right>990.00</td>
+                        <td align=right>990.00</td>
+                        <td align=right>990.00</td>
+                        <td></td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
 
         <br /><a href="#id-TOP">Go to top </a>
     </body>
