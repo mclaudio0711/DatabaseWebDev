@@ -6,12 +6,20 @@
     height: auto;
 }
 
+.Keyimg {
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 15%;
+    height: auto;
+}
 .ultype{
     list-style-type: disc;
 }
 
 thead{
     background-color: rgb(136, 170, 77);
+    color:rgb(4, 75, 39);
 }
 table{
     font-size: 16px;
@@ -20,11 +28,11 @@ table{
     border-spacing: 1cm;
     border-width: 10px;
     border: 2px solid rgb(29, 114, 71);
-    /* border-bottom: 2px solid rgb(29, 114, 71); */
-    /* border-top:  2px solid rgb(29, 114, 71); */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
 tr{
-    border-bottom: 2px solid rgb(141, 156, 112);
+    border-bottom: 1px solid rgb(29, 114, 71);
 }
 
 tr:nth-child(even) {
@@ -37,6 +45,8 @@ td{
 
 caption{
     font-style:oblique;
+    text-align: left;
+    font-size: 24px;
 }
 .ah3{
     display: block;
@@ -47,5 +57,5 @@ caption{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-  padding-top: 5px;  
+    padding-top: 5px;  
 }
