@@ -15,7 +15,9 @@ table{
     font-size: 16px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 1;
+    border-width: 10px;
+    border: springgreen;
 }
 caption{
     font-style:oblique;
