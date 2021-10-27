@@ -10,15 +10,31 @@
     list-style-type: disc;
 }
 
-
+thead{
+    background-color: rgb(136, 170, 77);
+}
 table{
     font-size: 16px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    border-spacing: 1;
+    border-collapse:collapse;
+    border-spacing: 1cm;
     border-width: 10px;
-    border: springgreen;
+    border: 2px solid rgb(29, 114, 71);
+    /* border-bottom: 2px solid rgb(29, 114, 71); */
+    /* border-top:  2px solid rgb(29, 114, 71); */
 }
+tr{
+    border-bottom: 2px solid rgb(141, 156, 112);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td{
+    text-align: center;
+}
+
 caption{
     font-style:oblique;
 }
@@ -26,7 +42,7 @@ caption{
     display: block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(35, 155, 71);
+    border-bottom-color: rgb(145, 233, 171);
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
