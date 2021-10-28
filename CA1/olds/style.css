@@ -26,11 +26,11 @@
 table{
     font-size: 16px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    /* text-indent: initial; */
-    /* text-align: center; */
+    text-indent: initial;
     border-collapse:collapse;
+    border-spacing: 10px;
+    border-width: 10px;
     border: 2px solid rgb(29, 114, 71);
-    /* border-spacing: 10px; */
     margin: 30px;
     position: relative;
 }
@@ -41,52 +41,58 @@ caption{
     font-size: 24px;
 }
 
-th, td{
-    border: 1px solid rgb(29, 114, 71);
-    text-align: center;
-    /* padding-top: 1px; */
-    /* padding-bottom: 1px; */
-    padding-inline: 10px;
-}
-  
-/* td{ text-align: center;} */
-
-/* td:last-child { margin-right: 0;} */
-
-tr:nth-child(even) { background-color: #f2f2f2; }
- /* Not necessary tbody just to refer to where is happens */
-tbody tr:hover { background-color: #D6EEEE; }
-
-th {
-    /* text-align: center; */
-    background-color: #04AA6D;
-    /* border-bottom-left-radius: 2px solid rgb(29, 114, 71); */
-    color: rgb(4, 75, 39);
-  }
-/* thead{
+thead{
     color:rgb(4, 75, 39);
     padding: 10px;
-} */
+}
+
+table td{
+    /* padding: 5px; */
+    padding-left:15px;
+}
+  
+td{
+    text-align: center;
+    /* padding: 10px 0; */
+    margin-right:50px;
+}
+td:last-child {
+    margin-right: 0;
+}
+tr{
+    border-bottom: 1px solid rgb(29, 114, 71);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tbody tr:hover {
+    background-color: #D6EEEE;
+}
+
 
 /* Fixed Headers */
 th {
     background-color: mintcream;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
-    border-bottom: 2px solid rgb(29, 114, 71);
+    border-bottom: 1px solid rgb(29, 114, 71);
+    /* position: -webkit-sticky; */
     position: sticky;
     top: 0;
     z-index: 2;
   }
 
-/* Align a specific line in the table to the right */
-#TCareer td:nth-of-type(10) { text-align: right; }
+ /* Align a specific line in the table to the right */
+#TCareer td:nth-of-type(10) {
+    text-align: right;
+  }
 
-#TSalaryBases td:nth-of-type(4) { text-align: right; }
-#TSalaryBases td:nth-of-type(5) { text-align: right; }
-#TSalaryBases td:nth-of-type(6) { text-align: right; }
-
+#TSalaryBases td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6) {
+    text-align: right;
+  }
   /* Align a specific Title and line in the table to the right *//*
-  #TCareer th:nth-of-type(3), td:nth-of-type(10) {
+  #TCareer th:nth-of-type(3),
+  td:nth-of-type(10) {
     text-align: right;
   }
   */ 
