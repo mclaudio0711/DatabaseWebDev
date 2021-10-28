@@ -30,7 +30,6 @@ table{
     border-collapse:collapse;
     border-spacing: 10px;
     border-width: 10px;
-    border: 2px solid rgb(29, 114, 71);
     margin: 30px;
     position: relative;
 }
