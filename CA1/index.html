@@ -35,10 +35,16 @@
         <b class="ah3"> Logical Diagram of Database</b><br />
         <img class="img" alt="Logical Diagram - Relational Data Model" src="pictures/LogicalDiagram.jpg" title="Logical Diagram">
 
-        <b class="ah3"> Logical Diagram of Database</b><br />
-        <img class="img" alt="Logical Diagram - Relational Data Model" src="pictures/LogicalDiagram.jpg" title="Logical Diagram">
-
-        <br />
+        <!-- References of Tables -->
+        <b class="ah3"> Tables of Database</b>
+        <p>
+            All Entities are shown in the tables below.
+            <ul>
+                <li><img class="Keyimg" alt="PKey" src="pictures/PK.jpg" title="Primary Key ICON">   Table attributes that are primary key are identified by this icon;</li>
+                <li><img class="Keyimg" alt="PKey" src="pictures/FK.jpg" title="Foreign Key ICON">   When there is a secondary key in the table, this icon will be displayed in the attribute;</li>
+                <i>                   "Clicking on the Foreign key icon will link to the table referenced to the relationship."</i>
+                </ul> 
+        </p>
         <table id="TCareer">
             <caption><b>Careeer</b></caption>
             <thead> 
@@ -547,7 +553,7 @@
             <thead>
                 <tr>
                     <th><img class="Keyimg" alt="PKey" src="pictures/PK.jpg" title="Primary Key">idSalary</th>
-                    <th><a href="#TJobTitle"><img class="Keyimg" alt="PKey" src="pictures/FK.jpg" title="Foreign Key"></a>idJobtitle</a></th>
+                    <th><a href="#TJobTitle"><img class="Keyimg" alt="PKey" src="pictures/FK.jpg" title="Foreign Key"></a>idJobtitle</th>
                     <th>dataUpdate</th>
                     <th>baseSalary</th>
                     <th>LowestRate</th>

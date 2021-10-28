@@ -107,5 +107,8 @@ th {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-top: 5px;  
+    padding-top: 5px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
 }
