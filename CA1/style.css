@@ -5,7 +5,7 @@
     max-width: 100%;
     height: auto;
 }
-
+/* Fixed size icon-image Primary an Foreing Key*/
 .Keyimg {
     width: 20px;
     /* display: block; */
@@ -16,15 +16,13 @@
     /* align-items: center; */
     /* background: transparent; */
 } 
+
 .ultype{
     list-style-type: disc;
 }
 
-thead{
-    color:rgb(4, 75, 39);
 
-    padding: 10px;
-}
+/* Standard Tables */
 table{
     font-size: 16px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -42,14 +40,11 @@ table td{
     padding-left:15px;
 }
 
-/* Fixed Headers */
-th {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
-  
+thead{
+    color:rgb(4, 75, 39);
+    padding: 10px;
+}
+
   
 td{
     text-align: center;
@@ -70,12 +65,39 @@ tbody tr:hover {
     background-color: #D6EEEE;
 }
 
-
 caption{
     font-style:oblique;
     text-align: left;
     font-size: 24px;
 }
+
+/* Fixed Headers */
+th {
+    background-color: mintcream;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgb(29, 114, 71);
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+ /* Align a specific line in the table to the right */
+#TCareer td:nth-of-type(10) {
+    text-align: right;
+  }
+
+#TSalaryBases td:nth-of-type(4),td:nth-of-type(5),td:nth-of-type(6) {
+    text-align: right;
+  }
+  /* Align a specific Title and line in the table to the right *//*
+  #TCareer th:nth-of-type(3),
+  td:nth-of-type(10) {
+    text-align: right;
+  }
+  */ 
+
+/* in tests */
 .ah3{
     display: block;
     border-bottom-width: 1px;
