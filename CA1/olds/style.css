@@ -1,3 +1,11 @@
+/* removing spacing between paragraphs */
+<style>
+p {
+    margin: 0;
+  }
+</style>
+
+
 .img {
     display: flex;
     margin-left: auto;
