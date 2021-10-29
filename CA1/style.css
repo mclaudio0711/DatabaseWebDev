@@ -82,8 +82,8 @@ th {
 #TSalaryBases td:nth-of-type(6) { text-align: right; }
 
 tfoot {
-  /* align-self: flex-end; */
-  /* align-content: flex-end; */
+  align-self: flex-end;
+  align-content: flex-end;
   text-align-last: right;
   text-align: right;
 }
