@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>WebDev CA2-Part1.2</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+    <script>
+        function reply_click(clicked_object) {
+            var sql = clicked_object.getAttribute('data-sql');
+            console.log(sql);
+            editor.setValue(sql);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">WebDev.CA2 - by MarceloClaudio </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">SQL Queries</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="part1.1.html">Part 1.1</a></li>
+                            <li><a class="dropdown-item disabled" href="part1.2.html" tabindex="-1" aria-disabled="true">Part 1.2</a></li>
+                            <li><a class="dropdown-item" href="part13.html">Part 1.3</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1><br>Data Manipulation and Validation <br>- Queries from Part 1.2 of CA-</h1>
+                <p class="lead">Project developed for assessment and submission of the Web Development course at CCT
+                    College</p>
+                <p>Higher Diploma in Science in Computing _MC.2021.11</p>
+            </div>
+            <!-- List of the queries -->
+            <div class="col-lg-auto d-flex flex-column mb-1 gap-1 mx-auto align-items-stretch order-1">
+                <button name="Query Q.01" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, dept_name 
+FROM departments
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.01</button>
+                <button name="Query Q.02" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Number of Employees' 
+FROM employees;" onClick="reply_click(this)">Query Q.02</button>
+                <button name="Query Q.03" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, * 
+FROM employees
+WHERE gender LIKE 'F' 
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.03</button>
+                <button name="Query Q.04" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, *
+FROM employees
+WHERE hire_date < '1986-01-01'
+AND last_name LIKE 'Simmel'
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
+                <button name="Query Q.05" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Employees -Last Name begins with B-'
+FROM employees
+WHERE last_name LIKE 'B%'
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.05</button>
+                <button name="Query Q.06" class="btn btn-primary" data-sql="CREATE TABLE emp_training(
+    trainer_no	INTEGER  PRIMARY KEY AUTOINCREMENT,
+    first_name	VARCHAR(30)	NOT NULL,
+    last_name 	VARCHAR(30)	NOT NULL,
+    t_module	VARCHAR(20)
+);
+SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'emp_training';" onClick="reply_click(this)">Query Q.06</button>
+                <button name="Query Q.07" class="btn btn-primary" data-sql="SELECT * FROM emp_training;
+
+INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
+( 'Joe', 'Bloggs', 'Google Docs' ),
+( 'Fred', 'Bloggs', 'Google Sheets' );
+
+SELECT * FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
+                <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
+                <button name="Query Q.09" class="btn btn-primary" data-sql="ALTER TABLE employees 
+ADD COLUMN email_address varchar(20);" onClick="reply_click(this)">Query Q.09</button>
+                <button name="Query Q.10" class="btn btn-primary" data-sql="SELECT * FROM employees WHERE emp_id = 10001;
+
+UPDATE employees
+    SET email_address = 'gfacello@gmail.com'
+    WHERE emp_id = 10001;
+
+SELECT * FROM employees WHERE emp_id = 10001;" onClick="reply_click(this)">Query Q.10</button>
+
+
+            </div>
+            <div class="col-lg-10 order-2">
+                <textarea id="commands" class="col-lg-8 order-2 mb-5">
+                   Welcome to Part 1.2 - Web Development - CA2.
+
+To test this project, the database has to be on your computer. 
+And must be selected through the option "select file". 
+                </textarea>
+                <!-- Information on how to obtain the file, see About this Project in the menu above. -->
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group me-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-info mt-1" id="execute">Execute</button>
+                    </div>
+                    <div class="input-group">
+                        <div Class="col-lg-auto me-2 mt-1 mb-0" >
+                            <input type="file" class="form-control" id="dbfile" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="error" class="error"></div>
+                <pre id="output">Results will be displayed here</pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/gui.js"></script>
+</body>
+
+</html>
