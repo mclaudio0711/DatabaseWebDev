@@ -36,8 +36,8 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">SQL queries</a>
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">SQL Queries</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="part1.1.html">Part 1.1</a></li>
                             <li><a class="dropdown-item disabled" href="part1.2.html" tabindex="-1" aria-disabled="true">Part 1.2</a></li>
@@ -88,13 +88,13 @@ first_name	VARCHAR(30)	NOT NULL,
 last_name 	VARCHAR(30)	NOT NULL,
 t_module	VARCHAR(20)
 );" onClick="reply_click(this)">Query Q.06</button>
-                <button name="Query Q.07 class="btn btn-primary" data-sql="INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
+                <button name="Query Q.07" class="btn btn-primary" data-sql="INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
 ( 'Joe', 'Bloggs', 'Google Docs' ),
 ( 'Fred', 'Bloggs', 'Google Sheets' );" onClick="reply_click(this)">Query Q.07</button>
-                <button name="Query Q.08 class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
-                <button name="Query Q.09 class="btn btn-primary" data-sql="ALTER TABLE employees 
+                <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
+                <button name="Query Q.09" class="btn btn-primary" data-sql="ALTER TABLE employees 
 ADD COLUMN email_address varchar(20);" onClick="reply_click(this)">Query Q.09</button>
-                <button name="Query Q.10 class="btn btn-primary" data-sql="UPDATE employees
+                <button name="Query Q.10" class="btn btn-primary" data-sql="UPDATE employees
 SET email_address = 'gfacello@gmail.com'
 WHERE emp_id = 10001;" onClick="reply_click(this)">Query Q.10</button>
 
