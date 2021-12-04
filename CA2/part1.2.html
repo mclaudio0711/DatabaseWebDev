@@ -81,7 +81,7 @@ LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
 FROM employees
 WHERE last_name LIKE 'B%'
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.05</button>
-                <button name="Query Q.06" class="btn btn-primary" data-sql="SELECT 'name', 'sql' FROM 'sqlite_master' WHERE type='table' and name = 'employees';
+                <button name="Query Q.06" class="btn btn-primary" data-sql="SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';
                 
 CREATE TABLE emp_training(
     trainer_no	INTEGER  PRIMARY KEY AUTOINCREMENT,
@@ -89,17 +89,14 @@ CREATE TABLE emp_training(
     last_name 	VARCHAR(30)	NOT NULL,
     t_module	VARCHAR(20)
 );
-
-SELECT 'name', 'sql' FROM 'sqlite_master' WHERE type='table' and name = 'employees';" onClick="reply_click(this)">Query Q.06</button>
-                <button name="Query Q.07" class="btn btn-primary" data-sql="SELECT *
-FROM emp_training;
+SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';" onClick="reply_click(this)">Query Q.06</button>
+                <button name="Query Q.07" class="btn btn-primary" data-sql="SELECT * FROM emp_training;
 
 INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
 ( 'Joe', 'Bloggs', 'Google Docs' ),
 ( 'Fred', 'Bloggs', 'Google Sheets' );
 
-SELECT *
-FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
+SELECT * FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
                 <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
                 <button name="Query Q.09" class="btn btn-primary" data-sql="ALTER TABLE employees 
 ADD COLUMN email_address varchar(20);" onClick="reply_click(this)">Query Q.09</button>
