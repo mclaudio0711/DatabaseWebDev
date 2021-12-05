@@ -79,8 +79,7 @@ AND last_name LIKE 'Simmel'
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
                 <button name="Query Q.05" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Employees -Last Name begins with B-'
 FROM employees
-WHERE last_name LIKE 'B%'
-LIMIT 0, 100;" onClick="reply_click(this)">Query Q.05</button>
+WHERE last_name LIKE 'B%';" onClick="reply_click(this)">Query Q.05</button>
                 <button name="Query Q.06" class="btn btn-primary" data-sql="CREATE TABLE emp_training(
     trainer_no	INTEGER  PRIMARY KEY AUTOINCREMENT,
     first_name	VARCHAR(30)	NOT NULL,
@@ -96,8 +95,11 @@ INSERT INTO emp_training (first_name,last_name,t_module) VALUES
 
 SELECT * FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
                 <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
-                <button name="Query Q.09" class="btn btn-primary" data-sql="ALTER TABLE employees 
-ADD COLUMN email_address varchar(20);" onClick="reply_click(this)">Query Q.09</button>
+                <button name="Query Q.09" class="btn btn-primary" data-sql="SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';
+ALTER TABLE employees 
+    ADD COLUMN email_address varchar(20);
+
+    SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';" onClick="reply_click(this)">Query Q.09</button>
                 <button name="Query Q.10" class="btn btn-primary" data-sql="SELECT * FROM employees WHERE emp_id = 10001;
 
 UPDATE employees
