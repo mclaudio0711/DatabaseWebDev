@@ -473,8 +473,7 @@ output {
 }
 
 iframe {
-  border: 1;
-  border-top:;
+  border: 1px;
   height: 600px;
   width: 90%;
 }
