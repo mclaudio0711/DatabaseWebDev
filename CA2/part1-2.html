@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>WebDev CA2-Part1.1</title>
+    <title>WebDev CA2-Part1.2</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -27,7 +27,7 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Part 1.1 WebDev.CA2 - by MarceloClaudio </a>
+            <a class="navbar-brand" href="#">Part 1.2 WebDev.CA2 - by MarceloClaudio </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -37,11 +37,11 @@
                     <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">SQL queries</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">SQL Queries</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item disabled" href=# tabindex="-1" aria-disabled="true">Part 1.1</a></li>
-                            <li><a class="dropdown-item" href="part1.2.html">Part 1.2</a></li>
-                            <li><a class="dropdown-item" href="part1.3.html">Part 1.3</a></li>
+                            <li><a class="dropdown-item" href="part1-1.html">Part 1.1</a></li>
+                            <li><a class="dropdown-item disabled" href="part1-2.html" tabindex="-1" aria-disabled="true">Part 1.2</a></li>
+                            <li><a class="dropdown-item" href="part1-3.html">Part 1.3</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
@@ -56,44 +56,61 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Data Manipulation and Validation <br>- Queries from Part 1.1 of CA-</h1>
+                <h1><br>Data Manipulation and Validation <br>- Queries from Part 1.2 of CA-</h1>
                 <p class="lead">Project developed for assessment and submission of the Web Development course at CCT
                     College</p>
                 <p>Higher Diploma in Science in Computing _MC.2021.11</p>
             </div>
             <!-- List of the queries -->
-            <div class="col-lg-auto mb-0 d-flex flex-column gap-0 mx-auto align-items-stretch">
-                <button name="Query Q.1" class="btn btn-primary" data-sql="SELECT * 
-FROM departments 
-LIMIT 0, 100;" onClick="reply_click(this)">Query Q.1</button>
-                <button name="Query Q.2" class="btn btn-primary" data-sql="SELECT emp_id, first_name, last_name 
-FROM employees 
-LIMIT 0, 100;" onClick="reply_click(this)">Query Q.2</button>
-                <div class="col-lg-auto mb-0 d-flex flex-column gap-0 mx-auto align-items-stretch">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                        data-bs-toggle="dropdown">
-                        Query Q.3
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <li><a class="dropdown-item" data-sql="SELECT title 
-FROM titles 
-LIMIT 0, 100;" onClick="reply_click(this)">Exactly like the question</a></li>
-                        <li><a class="dropdown-item" data-sql="SELECT employees.emp_id, employees.first_name, employees.last_name, titles.title 
-FROM titles 
-INNER JOIN employees ON employees.emp_id = titles.emp_id 
-LIMIT 0, 100;" onClick="reply_click(this)">+Plus with employees data</a></li>
-                    </ul>
-                </div>
-                <button name="Query Q.4" class="btn btn-primary" data-sql="SELECT DISTINCT title 
-FROM titles 
-LIMIT 0, 100;" onClick="reply_click(this)">Query Q.4</button>
-                <button name="Query Q.5" class="btn btn-primary" data-sql="SELECT first_name, last_name 
-FROM employees ORDER BY first_name, last_name 
-LIMIT 0, 100;" onClick="reply_click(this)">Query Q.5</button>
+            <div class="col-lg-auto d-flex flex-column mb-1 gap-1 mx-auto align-items-stretch order-1">
+                <button name="Query Q.01" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, dept_name 
+FROM departments
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.01</button>
+                <button name="Query Q.02" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Number of Employees' 
+FROM employees;" onClick="reply_click(this)">Query Q.02</button>
+                <button name="Query Q.03" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, * 
+FROM employees
+WHERE gender LIKE 'F' 
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.03</button>
+                <button name="Query Q.04" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, *
+FROM employees
+WHERE hire_date < '1986-01-01'
+AND last_name LIKE 'Simmel'
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
+                <button name="Query Q.05" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Employees -Last Name begins with B-'
+FROM employees
+WHERE last_name LIKE 'B%'
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.05</button>
+                <button name="Query Q.06" class="btn btn-primary" data-sql="CREATE TABLE emp_training(
+    trainer_no	INTEGER  PRIMARY KEY AUTOINCREMENT,
+    first_name	VARCHAR(30)	NOT NULL,
+    last_name 	VARCHAR(30)	NOT NULL,
+    t_module	VARCHAR(20)
+);
+SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'emp_training';" onClick="reply_click(this)">Query Q.06</button>
+                <button name="Query Q.07" class="btn btn-primary" data-sql="SELECT * FROM emp_training;
+
+INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
+( 'Joe', 'Bloggs', 'Google Docs' ),
+( 'Fred', 'Bloggs', 'Google Sheets' );
+
+SELECT * FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
+                <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
+                <button name="Query Q.09" class="btn btn-primary" data-sql="ALTER TABLE employees 
+ADD COLUMN email_address varchar(20);" onClick="reply_click(this)">Query Q.09</button>
+                <button name="Query Q.10" class="btn btn-primary" data-sql="SELECT * FROM employees WHERE emp_id = 10001;
+
+UPDATE employees
+    SET email_address = 'gfacello@gmail.com'
+    WHERE emp_id = 10001;
+
+SELECT * FROM employees WHERE emp_id = 10001;" onClick="reply_click(this)">Query Q.10</button>
+
+
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-                   Welcome to the Project submitted for Web Development - CA2.
+                   Welcome to Part 1.2 - Web Development - CA2.
 
 To test this project, the database has to be on your computer. 
 And must be selected through the option "select file". 
