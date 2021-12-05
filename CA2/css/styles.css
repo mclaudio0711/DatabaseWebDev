@@ -473,7 +473,9 @@ output {
 }
 
 iframe {
-  border: 0;
+  border: 1;
+  height: 600px;
+  width: 90%;
 }
 
 summary {
