@@ -77,45 +77,45 @@
             </div>
             <!-- List of the queries -->
             <div class="col-lg-auto d-flex flex-column mb-1 gap-1 mx-auto align-items-stretch order-1">
-                <button name="Query Q.01" class="btn btn-primary" data-sql="SELECT dept_name 
+                <button id="bQ1" name="Query Q.01" class="btn btn-primary" data-sql="SELECT dept_name 
 FROM departments
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.01</button>
-                <button name="Query Q.02" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Number of Employees' 
+                <button id="bQ2" name="Query Q.02" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Number of Employees' 
 FROM employees;" onClick="reply_click(this)">Query Q.02</button>
-                <button name="Query Q.03" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, * 
+                <button id="bQ3" name="Query Q.03" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, * 
 FROM employees
 WHERE gender LIKE 'F' 
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.03</button>
-                <button name="Query Q.04" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, *
+                <button id="bQ4" name="Query Q.04" class="btn btn-primary" data-sql="SELECT ROW_NUMBER() over (order by emp_id) as Row, *
 FROM employees
 WHERE hire_date < '1986-01-01'
 AND last_name LIKE 'Simmel'
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
-                <button name="Query Q.05" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Employees -Last Name begins with B-'
+                <button id="bQ5" name="Query Q.05" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total Employees -Last Name begins with B-'
 FROM employees
 WHERE last_name LIKE 'B%';" onClick="reply_click(this)">Query Q.05</button>
-                <button name="Query Q.06" class="btn btn-primary" data-sql="CREATE TABLE emp_training(
+                <button id="bQ6" name="Query Q.06" class="btn btn-primary" data-sql="CREATE TABLE emp_training(
     trainer_no	INTEGER  PRIMARY KEY AUTOINCREMENT,
     first_name	VARCHAR(30)	NOT NULL,
     last_name 	VARCHAR(30)	NOT NULL,
     t_module	VARCHAR(20)
 );
 SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'emp_training';" onClick="reply_click(this)">Query Q.06</button>
-                <button name="Query Q.07" class="btn btn-primary" data-sql="SELECT * FROM emp_training;
+                <button id="bQ7" name="Query Q.07" class="btn btn-primary" data-sql="SELECT * FROM emp_training;
 
 INSERT INTO emp_training (first_name,last_name,t_module) VALUES 
 ( 'Joe', 'Bloggs', 'Google Docs' ),
 ( 'Fred', 'Bloggs', 'Google Sheets' );
 
 SELECT * FROM emp_training;" onClick="reply_click(this)">Query Q.07</button>
-                <button name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
-                <button name="Query Q.09" class="btn btn-primary" data-sql="SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';
+                <button id="bQ8" name="Query Q.08" class="btn btn-primary" data-sql="DROP TABLE emp_training;" onClick="reply_click(this)">Query Q.08</button>
+                <button id="bQ9" name="Query Q.09" class="btn btn-primary" data-sql="SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';
 
 ALTER TABLE employees 
     ADD COLUMN email_address varchar(20);
 
 SELECT `name`, `sql` FROM `sqlite_master` WHERE type='table' and name = 'employees';" onClick="reply_click(this)">Query Q.09</button>
-                <button name="Query Q.10" class="btn btn-primary" data-sql="SELECT * FROM employees WHERE emp_id = 10001;
+                <button id="bQ10" name="Query Q.10" class="btn btn-primary" data-sql="SELECT * FROM employees WHERE emp_id = 10001;
 
 UPDATE employees
     SET email_address = 'gfacello@gmail.com'
