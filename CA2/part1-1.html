@@ -26,10 +26,11 @@
                 clicked_object.setAttribute('class','btn btn-primary active');
             }else{
                 console.log(btclick);
-                document.getElementsByName(btclick).setAttribute('class','btn btn-primary');
-                document.getElementById('bQ1').setAttribute('class','btn btn-primary');
-                btclick = clicked_object.getAttribute('name');
+                var xBTClick = btclick; 
                 clicked_object.setAttribute('class','btn btn-primary active');
+                btclick = clicked_object.getAttribute('name');
+                Object.getElementsByName(xBTClick).setAttribute('class','btn btn-primary');
+                Object.getElementById('bQ1').setAttribute('class','btn btn-primary');
             }
                  
         }
