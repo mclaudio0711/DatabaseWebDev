@@ -69,7 +69,8 @@ WHERE hire_date ='1991-05-01';" onClick="reply_click(this)">Query Q.01</button>
                 <button name="Query Q.02" class="btn btn-primary" data-sql="SELECT emp_id, COUNT(*) as 'Total number of the titles'
 FROM titles
 GROUP BY emp_id
-HAVING COUNT(title)>2;" onClick="reply_click(this)">Query Q.02</button>
+HAVING COUNT(title)>2
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.02</button>
                 <button name="Query Q.03" class="btn btn-primary" data-sql="SELECT COUNT(*) AS 'Total of employees'
 FROM salaries
 WHERE salary BETWEEN 90000 and 90040
@@ -77,10 +78,11 @@ AND to_date = '9999-01-01';" onClick="reply_click(this)">Query Q.03</button>
                 <button name="Query Q.04" class="btn btn-primary" data-sql="SELECT salaries.emp_id, employees.last_name, employees.first_name, salaries.salary
 FROM salaries
     INNER JOIN employees ON employees.emp_id = salaries.emp_id
-    WHERE salary > 90000
+WHERE salary > 90000
     AND to_date = '9999-01-01'
-    GROUP BY last_name, first_name
-    ORDER BY last_name DESC, first_name DESC;" onClick="reply_click(this)">Query Q.04</button>
+GROUP BY last_name, first_name
+ORDER BY last_name DESC, first_name DESC
+LIMIT 0, 100;" onClick="reply_click(this)">Query Q.04</button>
                 <button name="Query Q.05" class="btn btn-primary" data-sql="SELECT employees.first_name, employees.last_name, salaries.from_date, salaries.to_date, salaries.salary
 FROM salaries
     INNER JOIN employees ON employees.emp_id = salaries.emp_id
