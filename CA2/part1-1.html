@@ -22,19 +22,17 @@
             console.log(sql);
             editor.setValue(sql);
 
-
-
             if (btclick == 'new'){
-                btclick = clicked_object.getAttribute('name');
+                btclick = clicked_object.getAttribute('id');
                 clicked_object.setAttribute('class','btn btn-primary active');
             }else{
                 console.log(btclick);
-                var xBTClick = btclick; 
+                var xBT = "#"+btclick; 
                 clicked_object.setAttribute('class','btn btn-primary active');
-                var btn = document.querySelector("#bQ1");
+                btclick = clicked_object.getAttribute('id');
+                var btn = document.querySelector(xBT);
                 btn.setAttribute('class','btn btn-primary');
                 
-                btclick = clicked_object.getAttribute('name');
             }
                  
         }
@@ -84,7 +82,7 @@
                 <button id="bQ1" name="Query Q.1" class="btn btn-primary" data-sql="SELECT * 
 FROM departments 
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.1</button>
-                <button id="bQ1" name="Query Q.2" class="btn btn-primary" data-sql="SELECT emp_id, first_name, last_name 
+                <button id="bQ2" name="Query Q.2" class="btn btn-primary" data-sql="SELECT emp_id, first_name, last_name 
 FROM employees 
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.2</button>
                 <div class="col-lg-auto mb-0 d-flex flex-column gap-0 mx-auto align-items-stretch">
@@ -102,10 +100,10 @@ INNER JOIN employees ON employees.emp_id = titles.emp_id
 LIMIT 0, 100;" onClick="reply_click(this)">+Plus with employees data</a></li>
                     </ul>
                 </div>
-                <button name="Query Q.4" class="btn btn-primary" data-sql="SELECT DISTINCT title 
+                <button id="bQ4" name="Query Q.4" class="btn btn-primary" data-sql="SELECT DISTINCT title 
 FROM titles 
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.4</button>
-                <button name="Query Q.5" class="btn btn-primary" data-sql="SELECT first_name, last_name 
+                <button id="bQ5" name="Query Q.5" class="btn btn-primary" data-sql="SELECT first_name, last_name 
 FROM employees ORDER BY first_name, last_name 
 LIMIT 0, 100;" onClick="reply_click(this)">Query Q.5</button>
             </div>
