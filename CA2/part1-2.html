@@ -17,7 +17,7 @@
     <script>
         function reply_click(clicked_object) {
             var sql = clicked_object.getAttribute('data-sql');
-            Element.setAttribute(Class,"btn btn-primary active");
+            Element.setAttribute('Class','btn btn-primary active');
             console.log(sql);
             editor.setValue(sql);
         }
