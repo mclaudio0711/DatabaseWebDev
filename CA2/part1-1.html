@@ -15,15 +15,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
     <script>
-        var btclick = 'new'
+        var btclick = 'new';
+        console.log(btclick);
         function reply_click(clicked_object) {
             var sql = clicked_object.getAttribute('data-sql');
             console.log(sql);
             editor.setValue(sql);
             if (btclick == 'new'){
-                var btclick = clicked_object.getAttribute('name');
+                btclick = clicked_object.getAttribute('name');
                 clicked_object.setAttribute('class','btn btn-primary active');
             }else{
+                console.log(btclick);
                 document.getElementById(btclick).setAttribute('class','btn btn-primary');
                 btclick = clicked_object.getAttribute('name');
                 clicked_object.setAttribute('class','btn btn-primary active');
