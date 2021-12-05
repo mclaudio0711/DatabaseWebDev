@@ -21,6 +21,9 @@
             var sql = clicked_object.getAttribute('data-sql');
             console.log(sql);
             editor.setValue(sql);
+
+
+
             if (btclick == 'new'){
                 btclick = clicked_object.getAttribute('name');
                 clicked_object.setAttribute('class','btn btn-primary active');
@@ -28,9 +31,10 @@
                 console.log(btclick);
                 var xBTClick = btclick; 
                 clicked_object.setAttribute('class','btn btn-primary active');
+                var btn = document.querySelector("#"+btclick);
+                btn.setAttribute('class','btn btn-primary');
+                
                 btclick = clicked_object.getAttribute('name');
-                Object.getElementsByName(xBTClick).setAttribute('class','btn btn-primary');
-                Object.getElementById('bQ1').setAttribute('class','btn btn-primary');
             }
                  
         }
